@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
-
+gem 'faker'
+gem 'awesome_print'
+# API GEMS
+gem 'httparty'
+#Foundation
+gem 'foundation-rails'
+# Required due to an incompatibility between TurboLinks and Foundation.
+gem 'jquery-turbolinks'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -33,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
+  gem 'better_errors'
 end
 
 group :development do
