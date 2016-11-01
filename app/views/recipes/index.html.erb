@@ -1,2 +1,14 @@
-<h1>This page will show the search results in lists of 10.</h1>
+<h1>This page will show the search bar and results in lists of 10.</h1>
+
+<% content_for :search do %>
+  <div class="large-8 small-9 columns">
+  <%= search_form_for @search do |f| %>
+    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Recipe" %>
+  </div>
+    <div class="large-4 small-3 columns">
+      <%= f.submit "Search", class: "radius-right button" %>
+    </div>
+  <% end %>
+<% end %>
+
 <p>Find me in app/views/recipes/index.html.erb</p>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root to: 'recipes#search'
+    root to: 'recipes#index'
 
     resources :recipes
 

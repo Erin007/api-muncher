@@ -9,6 +9,25 @@
   </head>
 
   <body>
+    <header>
+      <div class="small-12 medium-6 large-6 columns">
+        <!-- Column 2 -->
+            <div class="top-bar-right">
+              <ul class="menu">
+                  <%# Search Bar %>
+                  <li><%= search_form_for Recipe.ransack(params[:q]) do |f| %>
+                      <%= f.search_field :name_or_description_cont, placeholder: "Search Pets"%></li>
+                      <li type="button"><%= f.submit "search", class: "button"%> </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+    </header>
     <%= yield %>
+    <footer>
+      <p>
+        &copy; Erin Bond 2016
+      </p>
+    </footer>
   </body>
 </html>
