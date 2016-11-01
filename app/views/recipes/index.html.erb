@@ -2,13 +2,12 @@
 
 <% content_for :search do %>
   <div class="large-8 small-9 columns">
-  <%= search_form_for @search do |f| %>
-    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Recipe" %>
+    <%= search_form_for @q do |f| %>
+    <%= f.search_field :label_eq %>
+    <%= f.submit %>
+      <% end %>
   </div>
-    <div class="large-4 small-3 columns">
-      <%= f.submit "Search", class: "radius-right button" %>
-    </div>
-  <% end %>
 <% end %>
+
 
 <p>Find me in app/views/recipes/index.html.erb</p>
