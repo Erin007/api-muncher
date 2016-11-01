@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   def search
+    @q = Recipe.ransack(params[:q])
   end
 
   def index

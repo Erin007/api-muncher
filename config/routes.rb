@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'recipes/search'
+    root to: 'recipes#search'
 
-  get 'recipes/index'
-
-  get 'recipes/show'
+    resources :recipes
 
 end
 

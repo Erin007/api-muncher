@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-
+#Gem for searching
+gem 'ransack'
 gem 'faker'
-gem 'awesome_print'
+gem 'awesome_print', require: 'ap'
 # API GEMS
 gem 'httparty'
 #Foundation
