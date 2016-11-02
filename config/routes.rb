@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
     root to: 'recipes#index'
 
-    resources :recipes
+    get '/recipes/*id', format: false,  to:'recipes#show', as: 'show_one'
+
+    resources :recipes, :except => [:show]
 
 end
 

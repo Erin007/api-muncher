@@ -9,7 +9,10 @@
 <% if !params[:q].blank? %>
   <ul>
     <%@recipes.each do |recipe|%>
-      <li><%=link_to(recipe.label, recipe_path(1))%></li>
+      <li><%=link_to(recipe.label, show_one_path(recipe.uri) )%></li>
       <%end%>
   </ul>
 <%end%>
+
+I need a way to access one recipe...
+I need a way to show the next ten, then the next ten etc...

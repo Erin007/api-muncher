@@ -17,6 +17,6 @@ class RecipesController < ApplicationController
 # end
 
   def show
-    @recipe = Recipe.find(params[:id].to_i)
+    @recipe = EdamamApiWrapper.search(params[:q])
   end
 end
