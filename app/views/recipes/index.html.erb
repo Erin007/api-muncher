@@ -6,5 +6,10 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<%=@recipes%>
-<%=params%>
+<% if !params[:q].blank? %>
+  <ul>
+    <%@recipes.each do |recipe|%>
+      <li><%=link_to(recipe.label, recipe_path(1))%></li>
+      <%end%>
+  </ul>
+<%end%>

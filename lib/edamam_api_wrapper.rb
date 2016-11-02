@@ -8,11 +8,20 @@ class EdamamApiWrapper
   URL_END = "&app_id=#{ID}&app_key=#{KEY}"
 #Example url https://api.edamam.com/search?q=chocolate&app_id=a65baf98&app_key=d226eb661cfec1fbf393845bccd84589
 
-  attr_reader :recipe, :id
+  attr_reader :recipe, :id, :label, :url, :ingredients, :image, :summary, :yield, :health_labels, :diet_labels
 
-  def initialize(recipe, id)
+  def initialize(recipe, id, options = {} )
     @recipe = recipe
     @id = id
+
+    @label = options[:label]
+    @url = options[:url]
+    @ingredients = options[:ingredientlines]
+    @image = options[:image]
+    @summary = options[:summary]
+    @yield = options[:yield]
+    @health_labels = options[:health_labels]
+    @diet_labels = options[:diet_labels]
   end
 
   def self.search(q)
@@ -25,7 +34,17 @@ class EdamamApiWrapper
       # store all of the hits in search results
         search_results = []
         data["hits"].each do |hit|
-           search_results<< hit["recipe"]
+          wrapper = Recipe.new hit["id"], hit["recipe"],
+           label: hit["recipe"]["label"],
+           url: hit["recipe"]["uri"],
+           ingredients: hit["recipe"]["ingredientlines"],
+           image: hit["recipe"]["image"],
+           summary: hit["recipe"]["summary"],
+           yield: hit["recipe"]["yield"],
+           health_labels: hit["recipe"]["healthLabels"],
+           diet_labels: hit["recipe"]["dietLabels"]
+
+           search_results << wrapper
          end
 
       return search_results

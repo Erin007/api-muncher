@@ -3,9 +3,6 @@ class RecipesController < ApplicationController
   def index
     if !params[:q].blank?
       @recipes = EdamamApiWrapper.search(params[:q])
-
-    else
-      @recipes = "Everything is broken"
     end
   end
 
