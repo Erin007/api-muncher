@@ -19,13 +19,20 @@ class EdamamApiWrapper
 
       url = BASE_URL + q + URL_END #this will go to the search results for q
       #get the search results for query q
-        data = HTTParty.get(url)
+      data = HTTParty.get(url)
       #if the search results, include hits
       if data["hits"]
+      # store all of the hits in search results
+        search_results = []
+        data["hits"].each do |hit|
+           search_results<< hit["recipe"]
+         end
+
+      return search_results
+
       end
       # if data.hits > 0
-      # #store all of the hits in search results
-      #   search_results = []
+
       #   data.hits.each do |hit|
       #       search_results<< hit.recipe
       #   end
