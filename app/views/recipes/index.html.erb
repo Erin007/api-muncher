@@ -1,13 +1,14 @@
 <h1>This page will show the search bar and results in lists of 10.</h1>
 
-<% content_for :search do %>
-  <div class="large-8 small-9 columns">
-    <%= search_form_for @q do |f| %>
-    <%= f.search_field :label_eq %>
-    <%= f.submit %>
-      <% end %>
-  </div>
+
+<%= form_tag("/", method: "get") do %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
 <% end %>
 
+<%=@recipes%>
 
+  <%@recipes.each do |recipe|%>
+  <%= recipe.label %>
+  <%end%>
 <p>Find me in app/views/recipes/index.html.erb</p>

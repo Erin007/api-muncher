@@ -1,2 +1,20 @@
 <h1>This page will show the details of an individual recipe.</h1>
+
+<div class="row small-up-1 medium-up-2 large-up-2" data-equalizer data-equalize-on="true">
+
+  <!-- View -->
+  <div class="column">
+    <div class="callout">
+      <h2><%=@recipe.label%></h2>
+      <image><%= image_tag(@recipe.image)%></image>
+      <h4><%=@recipe.summary%></h5>
+      <h5>Serves:<%=@recipe.yield%></h5>
+      <h5><%=@recipe.ingredients%></h5>
+      <h5><%=@recipe.diet_labels%></h5>
+      <h5><%=@recipe.health_labels%></h5>
+      <h6>For more info: link_to(<%=@recipe.url%>)</h6>
+    </div>
+  </div>
+
+
 <p>Find me in app/views/recipes/show.html.erb</p>
