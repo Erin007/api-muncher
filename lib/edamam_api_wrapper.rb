@@ -8,7 +8,7 @@ class EdamamApiWrapper
   URL_END = "&app_id=#{ID}&app_key=#{KEY}"
 #Example url https://api.edamam.com/search?q=chocolate&app_id=a65baf98&app_key=d226eb661cfec1fbf393845bccd84589
 
-  attr_reader :recipe, :label, :uri, :url, :ingredients, :image, :yield, :health_labels, :diet_labels, :from
+  attr_reader :recipe, :label, :uri, :url, :ingredients, :image, :yield, :health_labels, :diet_labels, :from, :to
 
   def initialize(recipe, options = {} )
     @recipe = recipe
@@ -23,7 +23,7 @@ class EdamamApiWrapper
     @diet_labels = options[:diet_labels]
   end
 
-  def self.search(q, from = 0 )
+  def self.search(q, from)
 
       url = BASE_URL + "q=#{q}" + URL_END + "&from=#{from}"#this will go to the search results for q
       #get the search results for query q
@@ -40,10 +40,9 @@ class EdamamApiWrapper
 
            search_results << wrapper
          end
+      end
 
       return search_results
-
-      end
   end
 
 #new method to show one that works like the search, but use r = uri rather than q = search term

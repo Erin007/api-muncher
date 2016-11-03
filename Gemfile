@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+#Gem for pagination
+gem 'will_paginate', '~> 3.1.1'
 #Gem for searching
 gem 'ransack'
 gem 'faker'

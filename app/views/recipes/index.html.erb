@@ -1,9 +1,5 @@
 <div class= "container">
 
-  <div class="home-veggies-pic" >
-    <%= image_tag("vegetables_background.jpg") %>
-  </div>
-
   <div class="search-box">
     <%= form_tag("/", method: "get") do %>
       <%= text_field_tag(:q) %>
@@ -11,15 +7,106 @@
     <% end %>
   </div>
 
-  <% if !params[:q].blank? %>
-    <ul>
-      <%@recipes.each do |recipe|%>
-        <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-        <%end%>
+    <div class="orbit" role="region" aria-label="Search Result Recipes">
+
+    <!-- Navigation Arrows -->
+    <a href="#" class="orbit-prev">Prev <span></span></a>
+    <a href="#" class="orbit-next">Next <span></span></a>
+
+      <ul class="orbit-container">
+          <ul class="orbit-content" data-orbit>
+            <li data-orbit-slide="1-10recipes">
+              <div>
+                <ul>
+                  <%@recipes.each do |recipe|%>
+                    <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                    <%end%>
+                </ul>
+              </div>
+            </li>
+        <li data-orbit-slide="11-20recipes">
+          <div>
+            <ul>
+              <%@recipes2.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="21-30recipes">
+          <div>
+            <ul>
+              <%@recipes3.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="31-40recipes">
+          <div>
+            <ul>
+              <%@recipes4.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="41-50recipes">
+          <div>
+            <ul>
+              <%@recipes5.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="51-60recipes">
+          <div>
+            <ul>
+              <%@recipes6.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="61-70recipes">
+          <div>
+            <ul>
+              <%@recipes7.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="71-80recipes">
+          <div>
+            <ul>
+              <%@recipes8.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="81-90recipes">
+          <div>
+            <ul>
+              <%@recipes9.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+        <li data-orbit-slide="91-100recipes">
+          <div>
+            <ul>
+              <%@recipes10.each do |recipe|%>
+                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+                <%end%>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </ul>
-    <p><%=link_to("see more",more_results_path)%></p>
-  <%end%>
+  </div>
+
 </div>
-
-
-I need a way to show the next ten, then the next ten etc...
