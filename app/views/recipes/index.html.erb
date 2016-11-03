@@ -1,18 +1,25 @@
-<h1>This page will show the search bar and results in lists of 10.</h1>
+<div class= "container">
+
+  <div class="home-veggies-pic" >
+    <%= image_tag("vegetables_background.jpg") %>
+  </div>
+
+  <div class="search-box">
+    <%= form_tag("/", method: "get") do %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+
+  <% if !params[:q].blank? %>
+    <ul>
+      <%@recipes.each do |recipe|%>
+        <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+        <%end%>
+    </ul>
+    <p><%=link_to("see more",more_results_path)%></p>
+  <%end%>
+</div>
 
 
-<%= form_tag("/", method: "get") do %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<% if !params[:q].blank? %>
-  <ul>
-    <%@recipes.each do |recipe|%>
-      <li><%=link_to(recipe.label, show_one_path(recipe.uri) )%></li>
-      <%end%>
-  </ul>
-<%end%>
-
-I need a way to access one recipe...
 I need a way to show the next ten, then the next ten etc...

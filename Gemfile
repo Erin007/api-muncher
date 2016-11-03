@@ -43,6 +43,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
   gem 'better_errors'
+  gem 'pry'
 end
 
 group :development do
