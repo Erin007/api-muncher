@@ -8,7 +8,7 @@ class EdamamApiWrapper
   URL_END = "&app_id=#{ID}&app_key=#{KEY}"
 #Example url https://api.edamam.com/search?q=chocolate&app_id=a65baf98&app_key=d226eb661cfec1fbf393845bccd84589
 
-  attr_reader :recipe, :label, :uri, :url, :ingredients, :image, :yield, :health_labels, :diet_labels
+  attr_reader :recipe, :label, :uri, :url, :ingredients, :image, :yield, :health_labels, :diet_labels, :from
 
   def initialize(recipe, options = {} )
     @recipe = recipe

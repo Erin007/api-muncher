@@ -1,5 +1,5 @@
 class Recipe
-  attr_reader :recipe, :uri, :label, :url, :ingredients, :image, :yield, :health_labels, :diet_labels
+  attr_reader :recipe, :uri, :label, :url, :ingredients, :image, :yield, :health_labels, :diet_labels, :from
 
     def initialize(recipe, options = {})
       @recipe = recipe
@@ -16,5 +16,3 @@ class Recipe
 
 
 end
-
-# hey, Erin. you were thinking about how to show one recipe on the show page. there are great notes that charles wrote in the main room. your next step is to go to postman and see what's up with the r parameter
