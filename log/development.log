@@ -18280,3 +18280,4 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/erinbond/.rvm/gems/ruby-2.3.0@global/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
