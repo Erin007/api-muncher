@@ -16,6 +16,8 @@
     </ul>
     <%end%>
   </div>
+  <% if !params[:q].blank? %>
+    <%= paginate @recipes%>
+  <%end%>
 
-<%= paginate @recipes%>
 </div>

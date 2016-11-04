@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 #Gems for pagination
-gem 'will_paginate', '~> 3.1.1'
+# gem 'will_paginate', '~> 3.1.1'
 gem 'kaminari'
-# gem 'rails-api'
+gem 'api-pagination'
 gem 'grape', '>= 0.10.0'
 #Gem for searching
 gem 'ransack'
