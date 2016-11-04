@@ -9,7 +9,7 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lobster|Itim" rel="stylesheet">
-  
+
   </head>
 
   <body>
@@ -17,9 +17,11 @@
       <%= image_tag('veggie_background.jpg')%>
     </div>
 
-
       <%= yield %>
 
+    <footer>
+      <p>This site created by Erin E. Bond for Ada Developers Academy, 2016 with special thanks to:<%= link_to(image_tag('edamam_logo.png'), "https://developer.edamam.com/")%></p>
+    </footer>
 
   </body>
 </html>

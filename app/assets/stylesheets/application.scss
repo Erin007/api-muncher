@@ -30,7 +30,8 @@ a {
 }
 
 a:hover{
-  color: #4a7c59;
+  opacity: .75;
+  color: #333333;
 }
 
 h1 {
@@ -139,6 +140,16 @@ h2 {
 
 .recipe-list ul li p{
  font-size: .75em;
+}
+
+footer img{
+  width: 5%;
+  opacity: .9;
+  border-radius: 5%;
+}
+
+footer {
+  text-align: center;
 }
 
 /*
