@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Recipes" %></title>
     <%= stylesheet_link_tag "foundation_and_overrides.scss" %>
-
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lobster|Open+Sans" rel="stylesheet">
   </head>
 
   <body>
+    <div class = "veggie_background">
+      <%= image_tag('veggie_background.jpg')%>
+    </div>
 
-    <%= yield %>
+
+      <%= yield %>
+  
 
   </body>
 </html>

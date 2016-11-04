@@ -1,11 +1,56 @@
 @import "foundation_and_overrides";
 
-.container {
-  margin: 10%;
+ul {
+  list-style-type: none;
 }
 
-body { font-family: helvetica;}
+.middle {
+  margin: 5%;
+  margin-top: 2%;
+  position: absolute;
+}
 
+.veggie_background {
+  opacity: .4;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+
+* {
+  font-family: Bree;
+}
+
+a {
+  color: #333333;
+}
+
+a:hover{
+  color: #A1CF6B;
+}
+
+h1 {
+  font-family: Lobster;
+  color: #A1CF6B;
+  text-shadow: 5px 2px 2px #4a7c59;
+  font-size: 5em;
+  opacity: .75;
+  width: 45%;
+  display: inline-block;
+}
+
+.search-box {
+  width: 30%;
+  display: inline-block;
+}
+
+.pseudoheader{
+  width: 100%;
+}
+
+.home-container{
+  padding: 2%;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
