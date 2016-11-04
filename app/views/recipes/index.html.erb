@@ -1,6 +1,5 @@
-<div class= "home-container">
+<div class= "home-container" class="row">
 
-  <div class = "pseudoheader">
     <h1>Recipe Wrangler</h1>
 
     <div class="search-box">
@@ -9,7 +8,7 @@
         <%= submit_tag("search") %>
       <% end %>
     </div>
-  </div>
+
 
   <div class = "recipe-list">
     <% if !params[:q].blank? %>

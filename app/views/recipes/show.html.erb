@@ -1,27 +1,29 @@
-<div class="row small-up-1 medium-up-2 large-up-2" data-equalizer data-equalize-on="true">
+  <div class="show-one" class="column">
 
-  <!-- View -->
-  <div class="column">
-    <div class="callout">
-      <h1><%=@recipe.label%></h1>
-      <h3><%= link_to("More Details", @recipe.url)%></h3>
+      <h2><%=@recipe.label%></h2>
+      <h4 class="home-link"><%=link_to("Home", root_path)%></h4>
+
+      <h5><%= link_to("More Details", @recipe.url)%></h5>
       <image><%= image_tag(@recipe.image)%></image>
-      <h3>Serves: <%=@recipe.yield%></h3>
 
-      <ul>
+      <ul class= "ingredients">
+        <h6>Serves: <%=@recipe.yield%></h6>
         <%@recipe.ingredients.each do |i|%>
-        <li><%=i%></li>
+        <li><h5><%=i%></h5></li>
         <% end %>
       </ul>
 
-      <ul>
-        <%@recipe.diet_labels.each do |dl|%>
-        <li><%=dl%></li>
-        <% end %>
-        <%@recipe.health_labels.each do |hl|%>
-        <li><%=hl%></li>
-        <% end %>
-      </ul>
+      <div class = "health-labels">
+        <ul>
+          <%@recipe.diet_labels.each do |dl|%>
+          <li><%=dl%></li>
+          <li>●</li>
+          <% end %>
+          <%@recipe.health_labels.each do |hl|%>
+          <li><%=hl%></li>
+          <li>●</li>
+          <% end %>
+        </ul>
+      </div>
 
-    </div>
   </div>
