@@ -21793,3 +21793,4 @@ NoMethodError - undefined method `each' for nil:NilClass:
   puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 
 Started POST "/__better_errors/863ae48b56d33fe1/variables" for ::1 at 2016-11-03 16:59:30 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/erinbond/.rvm/gems/ruby-2.3.0@global/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
