@@ -55,7 +55,7 @@ h2 {
 
 .recipe-list, .recipe {
   font-size: 1.25em;
-  background: white;
+  background: white; 
   width: 65%;
   border-radius: 5%;
 }
@@ -112,6 +112,10 @@ h2 {
   border-radius: 15%;
   padding: .75%;
   background: white;
+}
+
+.recipe-list {
+  padding: 2%;
 }
 
 

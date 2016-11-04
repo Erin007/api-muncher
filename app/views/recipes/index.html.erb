@@ -11,13 +11,19 @@
 
 
   <div class = "recipe-list">
-    <% if !params[:q].blank? %>
+    <% if !params[:q].blank?%>
     <ul>
       <%@recipes.each do |recipe|%>
         <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
         <%end%>
     </ul>
       <p><%= paginate @recipes%></p>
+    <%end%>
+
+    <% if !params[:q].blank? && @recipes.empty?%>
+      <p>
+        Sorry, there are no recipes matching that search term. Try again. 
+      </p>
     <%end%>
   </div>
 
