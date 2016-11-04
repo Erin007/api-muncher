@@ -23,9 +23,9 @@ class EdamamApiWrapper
     @diet_labels = options[:diet_labels]
   end
 
-  def self.search(q, from)
+  def self.search(q, from, to)
 
-      url = BASE_URL + "q=#{q}" + URL_END + "&from=#{from}"#this will go to the search results for q
+      url = BASE_URL + "q=#{q}" + URL_END + "&from=#{from}&to=#{to}"#this will go to the search results for q
       #get the search results for query q
       data = HTTParty.get(url)
       #if the search results, include hits

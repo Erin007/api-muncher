@@ -8,92 +8,13 @@
   </div>
 
   <div class = "recipe-list">
+    <% if !params[:q].blank? %>
     <ul>
       <%@recipes.each do |recipe|%>
         <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
         <%end%>
     </ul>
-  </div>
-
-
-
-
-          <div>
-            <ul>
-              <%@recipes2.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes3.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes4.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes5.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes6.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes7.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <%@recipes8.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-
-
-          <div>
-            <ul>
-              <%@recipes9.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-        </li>
-
-          <div>
-            <ul>
-              <%@recipes10.each do |recipe|%>
-                <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
-                <%end%>
-            </ul>
-          </div>
-        </li>
-
-
+    <%end%>
   </div>
 
 </div>
