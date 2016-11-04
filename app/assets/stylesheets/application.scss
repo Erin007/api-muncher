@@ -11,14 +11,18 @@ ul {
 }
 
 .veggie_background {
-  opacity: .4;
+  opacity: .5;
   position: absolute;
   overflow: hidden;
   z-index: -1;
 }
 
 * {
-  font-family: Bree;
+  font-family: Itim;
+}
+
+.ingredients *{
+  font-family: Itim;
 }
 
 a {
@@ -49,8 +53,16 @@ h2 {
   display: inline-block;
 }
 
-.recipe-list {
+.recipe-list, .recipe {
   font-size: 1.25em;
+  background: white;
+  width: 65%;
+  border-radius: 5%;
+}
+
+.recipe{
+  width: 90%;
+  padding: 1%;
 }
 
 .home-container, .show-one{
@@ -68,10 +80,21 @@ h2 {
   width: 100%;
 }
 
-.show-one img {
+.recipe img {
   border-radius: 5%;
   display: inline-block;
-  // margin-top: 0%;
+  vertical-align: top;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.recipe .ingredients {
+    margin-top: 3%;
+    width: 50%;
+}
+
+.recipe .health-labels{
+  width: 90%;
 }
 
 .show-one .ingredients{

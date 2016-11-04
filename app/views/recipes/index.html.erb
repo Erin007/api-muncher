@@ -17,11 +17,8 @@
         <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
         <%end%>
     </ul>
+      <p><%= paginate @recipes%></p>
     <%end%>
   </div>
-
-  <% if !params[:q].blank? %>
-    <%= paginate @recipes%>
-  <%end%>
 
 </div>
