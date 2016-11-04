@@ -13,7 +13,6 @@ class RecipesController < ApplicationController
         @recipes9 = EdamamApiWrapper.search(params[:q], 80)
         @recipes10 = EdamamApiWrapper.search(params[:q], 90)
 
-
         #.paginate(:page => params[:page], :per_page => 10)
     end
   end
