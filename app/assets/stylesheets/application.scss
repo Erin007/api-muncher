@@ -55,8 +55,8 @@ h2 {
 
 .recipe-list, .recipe {
   font-size: 1.25em;
-  background: white; 
-  width: 65%;
+  background: white;
+  width: 100%;
   border-radius: 5%;
 }
 
@@ -88,6 +88,18 @@ h2 {
   margin-left: 3%;
 }
 
+.recipe-list img {
+  border-radius: 5%;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+
+.recipe-list p {
+  display: inline-block;
+  width: 40%;
+}
+
 .recipe .ingredients {
     margin-top: 3%;
     width: 50%;
@@ -116,8 +128,18 @@ h2 {
 
 .recipe-list {
   padding: 2%;
+  padding-bottom: 0%;
+  width: 100%;
 }
 
+.pages {
+  text-align: center;
+  width: 100%;
+}
+
+.recipe-list ul li p{
+ font-size: .75em;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

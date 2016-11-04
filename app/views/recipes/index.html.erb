@@ -11,20 +11,29 @@
 
 
   <div class = "recipe-list">
-    <% if !params[:q].blank?%>
+    <% if !params[:q].blank? && !@recipes.empty?%>
     <ul>
       <%@recipes.each do |recipe|%>
-        <li><%=link_to(recipe.label, show_one_path(recipe.uri))%></li>
+        <li class = "small-12 medium-4 column">
+          <%=link_to(image_tag(recipe.image), show_one_path(recipe.uri))%>
+          <p><%=link_to(recipe.label, show_one_path(recipe.uri))%></p>
+          <p></p>
+        </li>
         <%end%>
     </ul>
-      <p><%= paginate @recipes%></p>
+
+        <div class="pagination text-center", class="medium-12 column">
+            <%= paginate @recipes%>
+        </div>
+
     <%end%>
 
     <% if !params[:q].blank? && @recipes.empty?%>
       <p>
-        Sorry, there are no recipes matching that search term. Try again. 
+        Sorry, there are no recipes matching that search term. Try again.
       </p>
     <%end%>
   </div>
+
 
 </div>
